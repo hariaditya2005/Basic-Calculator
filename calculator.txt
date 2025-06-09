@@ -1,0 +1,41 @@
+#include<stdio.h>
+int main(){
+    int choice, a,b;
+    char status;
+    printf("Enter two integers\n");
+    scanf("%d%d",&a,&b);
+    calculation:
+    printf("Enter your choice\n");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+        case 1:
+        printf("Addition\n");
+        printf("%d",a+b);
+        break;
+        case 2:
+        printf("Subtraction\n");
+        printf("%d",a-b);
+        break;
+        case 3:
+        printf("Multiplication\n");
+        printf("%d",a*b);
+        break;
+        case 4:
+        printf("Division\n");
+        printf("%d",a/b);
+        break;
+        case 5:
+        printf("Modulo Division\n");
+        printf("%d",a%b);
+        break;
+        default:
+        printf("Invalid selection\n");
+    }
+    printf("\nDo you want to continue\n");
+    scanf("%c",&status);
+          if(status=='y'||status=='Y')
+          {
+               goto calculation;
+          }
+}
